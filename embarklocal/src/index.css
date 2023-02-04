@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#main {
+  width: 1000px;
+  margin: auto;
+}
+
+#thumbnails {
+  display: flex;
+}
+#featured-destinations {
+        margin-top: 50px;
+    }
+    #testimonies {
+        margin-top: 50px;
+    }
+.img-container {
+        display: block;
+        align-items: center;
+        flex-direction: column;
+  background-color: green;
+  margin: 20px;
+  width: 360px;
+  height: 420px;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 1px 2px 14px 5px rgba(0,0,0,0.17);
+        position: relative;
+    }
+.img-container > img {
+        width: auto;
+        height: 100%;
+        align-items: center;
+        position:absolute; 
+        object-fit: cover;
+}
