@@ -8,6 +8,27 @@ class LandingPage extends React.Component{
   render() {
     return(
       <div id = "main">
+        <div id = "nav">
+          <ul id="navbar">
+
+          <li><a id = "active-nav" href="">Home</a></li>
+            <li>
+            <a href="">Travelers</a>
+            <ul>
+              <li><a href="">Sub-menu 1</a></li>
+              <li><a href="">Sub-menu 2</a>
+                <ul>
+                  <li><a href="">Sub-sub-menu 1</a></li>
+                  <li><a href="">Sub-sub-menu 2</a></li>
+                  <li><a href="">Sub-sub-menu 3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href = "">Hosts</a></li>
+          <li><a href = "">FAQ</a></li>
+          </ul>
+        </div>
         <div id = "header">
             <h1>EmbarkLocal</h1>
             <p>Welcome to ConnectLocal, your one-stop solution for authentic and meaningful travel experiences.
