@@ -46,6 +46,9 @@ code {
   position:absolute; 
   object-fit: cover;
 }
+#nav-section {
+  margin-bottom: 60px;
+}
 
 #navbar, #navbar ul {
   list-style: none;
@@ -90,7 +93,7 @@ code {
   display: none;
 }
 #navbar ul ul {
-  left: 150px;
+  left: 250px;
   top: 0px;
 }
 #navbar li:hover > ul {

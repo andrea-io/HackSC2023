@@ -8,9 +8,8 @@ class LandingPage extends React.Component{
   render() {
     return(
       <div id = "main">
-        <div id = "nav">
+        <div id = "nav-section">
           <ul id="navbar">
-
           <li><a id = "active-nav" href="">Home</a></li>
             <li>
             <a href="">Travelers</a>
