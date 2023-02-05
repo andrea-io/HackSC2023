@@ -18,7 +18,7 @@ function App() {
           <Route exact path = "/SearchPage" element={<SearchPage/>} />
           <Route exact path = "/RegisterPage" element={<RegisterPage/>} />
           <Route exact path = "/ProfilePage" element={<ProfilePage/>} />
-          <Route exact path = "/DashPage" element={<DashPage/>} />
+          <Route path = "/DashPage/:type" element={<DashPage/>} />
           <Route exact path = '/LoginPage' element={<LoginPage/>} />
           <Route exact path = '/FAQPage'element={<FAQPage/>} />
           {/* <Route exact path = "/" component={LandingPage} /> */}

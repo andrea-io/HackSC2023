@@ -1,9 +1,13 @@
 import React from 'react';
 import './dashPage.css';
-import {BrowserRouter, Route, Link } from "react-router-dom";
+import {BrowserRouter, Route, Link, useParams, useLocation } from "react-router-dom";
 import Profile from './profile';
 
-const DashPage = () => {
+const DashPage = (props) => {
+    const {type} = useParams();
+    const {state} = useLocation();
+    console.log(type)
+    console.log(state)
     return(
         <div class = "parent">
             <div id = "nav-section">
@@ -18,7 +22,7 @@ const DashPage = () => {
           <li><Link to = "/FAQPage"><a id = "active-nav" href = "">FAQ</a></Link></li>
           </ul>
         </div>
-            <h1>Welcome Ana!</h1>
+            <h1>Welcome {state}!</h1>
             <div id = "search">
                 <h2>Where do you want to go?</h2>
                 <div class = "search-bar-container">
