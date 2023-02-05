@@ -7,7 +7,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Route exact path="/" component={LandingPage} />
-      <Route path="/searchPage" component={SearchPage} />
+      <Route path="/SearchPage" component={SearchPage} />
     </BrowserRouter>
   );
 };

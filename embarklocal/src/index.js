@@ -4,13 +4,12 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route, Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
-import SearchPage from './searchPage';
 
 const LandingPage = () => {
   const navigate = useNavigate();
 
     const handleClick = () => {
-      navigate('/searchPage');
+      navigate('/SearchPage');
       console.log("Die");
     };
 
@@ -47,7 +46,7 @@ const LandingPage = () => {
           <div class = "search-bar-container">
             <form action = "" class = "search-bar">
               <input type = "text" placeholder="Enter your travel location" name = "search"></input>
-              <Link to = "/searchPage"><button><img src = "https://assets.stickpng.com/images/585e4ad1cb11b227491c3391.png" alt = "search-icon"></img></button></Link>
+              <Link to = "/SearchPage"><button><img src = "https://assets.stickpng.com/images/585e4ad1cb11b227491c3391.png" alt = "search-icon"></img></button></Link>
             </form>
           </div>
         </div> 
