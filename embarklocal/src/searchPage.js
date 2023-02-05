@@ -10,6 +10,7 @@ class SearchPage extends React.Component{
         <>
         <div class="filter">
             <h1>Filter</h1>
+            <input type = "checkbox"></input>
         </div>
         <div class="search">
             <input type="text" placeholder="Search.."></input>
@@ -29,7 +30,7 @@ class SearchPage extends React.Component{
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <LandingPage/>
+    <SearchPage/>
   </React.StrictMode>
 );
 // If you want to start measuring performance in your app, pass a function
