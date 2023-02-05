@@ -15,14 +15,6 @@ const LandingPage = () => {
             <li>
             <Link to = "/RegisterPage"><a href="">Register</a></Link>
             <ul>
-              <li><a href="">Sub-menu 1</a></li>
-              <li><a href="">Sub-menu 2</a>
-                <ul>
-                  <li><a href="">Sub-sub-menu 1</a></li>
-                  <li><a href="">Sub-sub-menu 2</a></li>
-                  <li><a href="">Sub-sub-menu 3</a></li>
-                </ul>
-              </li>
             </ul>
           </li>
           <li><a href = "">Hosts</a></li>

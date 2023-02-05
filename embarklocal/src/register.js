@@ -4,6 +4,7 @@ import {collection, addDoc} from 'firebase/firestore'
 import './register.css'
 import reportWebVitals from './reportWebVitals';
 import {useState, useEffect} from 'react'
+import {BrowserRouter, Route, Link } from "react-router-dom";
 
 const RegisterPage = () => {
 
@@ -78,7 +79,7 @@ return (
               <option value="Other">Other</option>
             </select>
 
-            <button type = "submit">Save</button>
+            <Link to = "/dashPage"><button type = "submit">Save</button></Link>
         </form>
     </div>
 );
