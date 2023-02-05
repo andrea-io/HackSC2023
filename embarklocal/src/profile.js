@@ -1,5 +1,4 @@
-class Profile extends React.Component{
-    render() {
+const Profile = ()=>{
         return (
             <div id = "user">
                 <div id = "userPic">
@@ -13,5 +12,5 @@ class Profile extends React.Component{
                 </div>    
             </div>
         )
-    }
 }
+export default Profile;
