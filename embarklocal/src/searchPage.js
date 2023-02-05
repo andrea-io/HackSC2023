@@ -34,6 +34,7 @@ class SearchPage extends React.Component{
   }
 }
 
+export default SearchPage;
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
