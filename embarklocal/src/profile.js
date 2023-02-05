@@ -6,7 +6,7 @@ const Profile = ({imgsrc,firstName,lastName,location,bio})=>{
                 </div>
                 <div id = "userInfo">
                     <h1>{firstName} {lastName}</h1>
-                    <p class = "preferences">Open to day excursions</p>
+                    <p class = "tripLength">Willing to embark for {tripLength} days</p>
                     <p class = "location">{location}</p>
                     <p>{bio}</p>
                 </div>    
