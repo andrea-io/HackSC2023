@@ -6,11 +6,6 @@ import {BrowserRouter, Route, Link } from "react-router-dom";
 import { redirect } from 'react-router-dom';
 
 const LandingPage = () => {
-    const handleClick = async() => {
-    //   console.log("Die");
-    //   window.location = "/SearchPage"; 
-    //   return redirect("/SearchPage");
-    };
 
     return (
       <div id = "main">
