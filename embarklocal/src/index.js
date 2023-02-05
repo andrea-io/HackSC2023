@@ -4,12 +4,13 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
+import SearchPage from './searchPage';
 
 const LandingPage = () => {
   const navigate = useNavigate();
 
     const handleClick = useCallback(() => {
-      navigate('/search');
+      navigate('/searchPage');
       console.log("Die");
     }, [navigate]);
 

@@ -8,7 +8,7 @@ const App = () => {
   return (
     <Router>
       <Route exact path="/" component={LandingPage} />
-      <Route path="/search" component={SearchPage} />
+      <Route path="/searchPage" component={SearchPage} />
     </Router>
   );
 };
