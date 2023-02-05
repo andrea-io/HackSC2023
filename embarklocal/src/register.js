@@ -29,7 +29,7 @@ const addProfile = async (e) => {
         password: getPassword, // text 
         bio: getBio, // text 
         loc: getLocation, // dropdown
-        tripLength: getTripLength,
+        tripLength: getTripLength, //true means longterm
         applied: [],
         imgsrc: "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" 
       })
@@ -69,31 +69,34 @@ return (
             <input type= "text" id="bio" name="bio" placeholder="Tell us about yourself" onChange={(e) => setBio(e.target.value)} value = {getBio} ></input>
 
             <label for="preference">Preference</label>
+            <div class="preference">
                 <input type="radio"
                        id="host"
                        name="host"
                        onChange={(e) => setPreference(true)} ></input>
-                <label for="host">Host</label><br></br>
+                <label for="host">Host</label>
             
                 <input type="radio"
                        id="tourist"
                        name="tourist"
                        onChange={(e) => setPreference(false)} ></input>
-            <label for="tourist">Tourist</label>
+                <label for="tourist">Tourist</label>
+            </div>
 
             <label for="tripLength">Length of Trip</label>
+            <div class = "tripLength">
                 <input type="radio"
                        id="longterm"
                        name="longterm"
                        onChange={(e) => setTripLength(true)} ></input>
-                <label for="longterm">Longterm Stay</label><br></br>
+                <label for="longterm">Longterm Stay</label>
             
                 <input type="radio"
                        id="day"
                        name="day"
                        onChange={(e) => setTripLength(false)} ></input>
             <label for="day">Day Excursion</label>
-
+            </div>
             <label for="loc">Location</label>
             <select id="loc" name="loc" onChange={(e) => setLocation(e.target.value)}>
               <option value="Las Vegas, Nevada" >Las Vegas, Nevada</option>
