@@ -18,7 +18,7 @@ const LandingPage = () => {
           <ul id="navbar">
           <li><a id = "active-nav" href="">Home</a></li>
             <li>
-            <a href="">Travelers</a>
+            <Link to = '/RegisterPage'><a href="">Register</a></Link>
             <ul>
               <li><a href="">Sub-menu 1</a></li>
               <li><a href="">Sub-menu 2</a>

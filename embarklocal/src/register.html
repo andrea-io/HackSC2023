@@ -1,44 +1,75 @@
-import { useRef } from 'react';
-import {db} from './firebase'
-import {collection, addDoc} from 'firebase/firestore'
-import './register.css'
-import reportWebVitals from './reportWebVitals';
-import {useState, useEffect} from 'react'
-
-const RegisterPage = () => {
-
-const[fName,setfName] = useState('')
-const[lName,setlName] = useState('')
-const[getEmail,setEmail] = useState('')
-const[getBio,setBio] = useState('')
-const[getPassword,setPassword] = useState('')
-const[getLocation,setLocation] = useState('')
-const[getPreference,setPreference] = useState('')
-
-const addProfile = async (e) => {
-    e.preventDefault()
-    try {
-      await addDoc(collection(db, 'profiles'), {
-        firstName: fName, //text
-        lastName: lName, //text
-        email: getEmail, // text
-        preference: getPreference, //true means host
-        password: getPassword, // text 
-        bio: getBio, // text 
-        loc: getLocation, // dropdown
-        applied: [], 
-      })
-    } catch (err) {
-      alert(err)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .App {  
+    width: 500px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 lightgray;
     }
-  }
-  
 
-return (
-    <div class ="app">
+    h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    }
+
+    form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .form-group {
+    width: 100%;
+    margin-bottom: 20px;
+    }
+
+    label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    }
+
+    input[type="text"], textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    }
+
+    .form-group-btns {
+    display: flex;
+    justify-content: center;
+    }
+
+    button[type="button"] {
+    background-color: lightblue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 20px;
+    cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <div class ="App">
         <form onSubmit={addProfile}>
             <label for="firstName">First Name</label>
-            <input type= "text" id="firstName" name="firstName" placeholder="Your name..." onChange={(e) => setfName(e.target.value)} value = {fName} ></input>
+            <input type= "text" id="firstName" name="firstName" placeholder="Your name..." onChange={(e) => setfName(e.target.value)} value = {fName}></input>
 
             <label for="lastName">Last Name</label>
             <input type= "text" id="lastName" name="lastName" placeholder="Your last name..."  onChange={(e) => setlName(e.target.value)} value = {lName} ></input>
@@ -81,7 +112,5 @@ return (
             <button type = "submit">Save</button>
         </form>
     </div>
-);
-}
-
-export default RegisterPage;
+</body>
+</html>
