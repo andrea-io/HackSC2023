@@ -20,7 +20,7 @@ const DashPage = (props) => {
             </ul>
           </li>
           <li><Link to = "/LoginPage"><a href = "">Log In</a></Link></li>
-          <li><Link to = "/FAQPage"><a id = "active-nav" href = "">FAQ</a></Link></li>
+          <li><Link to = "/FAQPage"><a href = "">FAQ</a></Link></li>
           </ul>
         </div>
             <h1>Welcome {state.name}!</h1>
