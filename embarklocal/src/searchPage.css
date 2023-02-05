@@ -176,9 +176,11 @@ button:hover, a:hover {
   padding: 24px 20px;
   border-radius: 8px;
   font-size: 20px;
+  float: left;
 }
 .search-bar button img {
   width: 25px;
+  float: left;
 }
 .search-bar button {
   border: 0;

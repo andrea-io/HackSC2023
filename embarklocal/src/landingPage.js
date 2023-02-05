@@ -40,7 +40,7 @@ const LandingPage = () => {
           <div class = "search-bar-container">
             <form action = "" class = "search-bar">
               <input type = "text" placeholder="Enter your travel location" name = "search" id="idk"></input>
-              <Link to='/SearchPage'><img src = "https://assets.stickpng.com/images/585e4ad1cb11b227491c3391.png" alt = "search-icon"></img></Link>
+              <Link to='/SearchPage'><button><img src = "https://assets.stickpng.com/images/585e4ad1cb11b227491c3391.png" alt = "search-icon"></img></button></Link>
             </form>
           </div>
         </div> 

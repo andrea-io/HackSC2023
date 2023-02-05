@@ -58,7 +58,7 @@ return (
                        id="host"
                        name="host"
                        onChange={(e) => setPreference(true)} ></input>
-                <label for="host">Host</label>
+                <label for="host">Host</label><br></br>
             
                 <input type="radio"
                        id="tourist"
@@ -68,14 +68,14 @@ return (
 
 
             <label for="loc">Location</label>
-            <select id="loc" name="loc">
-              <option value="Las Vegas, Nevada" onChange={(e) => setLocation(e.target.value)} >Las Vegas, Nevada</option>
-              <option value="Los Angeles, California" onChange={(e) => setLocation(e.target.value)} >Los Angeles, California</option>
-              <option value="Madrid, Spain" onChange={(e) => setLocation(e.target.value)} >Madrid, Spain</option>
-              <option value="Melbourne, Australia" onChange={(e) => setLocation(e.target.value)} >Melbourne, Australia</option>
-              <option value="New York City, New York" onChange={(e) => setLocation(e.target.value)} >New York City, New York</option>
-              <option value="Rio de Janeiro, Brazil" onChange={(e) => setLocation(e.target.value)} >Rio de Janeiro, Brazil</option>
-              <option value="Other" onChange={(e) => setLocation(e.target.value)} >Other</option>
+            <select id="loc" name="loc" onChange={(e) => setLocation(e.target.value)}>
+              <option value="Las Vegas, Nevada" >Las Vegas, Nevada</option>
+              <option value="Los Angeles, California" >Los Angeles, California</option>
+              <option value="Madrid, Spain" >Madrid, Spain</option>
+              <option value="Melbourne, Australia">Melbourne, Australia</option>
+              <option value="New York City, New York" >New York City, New York</option>
+              <option value="Rio de Janeiro, Brazil" >Rio de Janeiro, Brazil</option>
+              <option value="Other">Other</option>
             </select>
 
             <button type = "submit">Save</button>
