@@ -29,19 +29,24 @@ code {
 #buttons {
   width: auto;
   display: inline;
+  text-align: center;
 }
 .action-button {
   width: auto;
   display: inline-block;
   align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 #hosts-button {
   height: 50px;
   width: 200px;
+  text-align: center;
 }
 #travelers-button {
   height: 50px;
   width: 200px;
+  text-align: center;
 }
 .img-container {
   display: block;
