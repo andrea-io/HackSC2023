@@ -49,7 +49,7 @@ const SearchPage = () => {
         {
             profile.map((prof)=>(
                 <Profile 
-                    imgsrc = "https://images.unsplash.com/photo-1509839862600-309617c3201e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                    imgsrc = {prof.data.imgsrc}
                     firstName = {prof.data.firstName}
                     lastName = {prof.data.lastName}
                     bio = {prof.data.bio}

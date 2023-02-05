@@ -26,7 +26,8 @@ const addProfile = async (e) => {
         password: getPassword, // text 
         bio: getBio, // text 
         loc: getLocation, // dropdown
-        applied: [], 
+        applied: [],
+        imgsrc: "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" 
       })
     } catch (err) {
       alert(err)
@@ -52,18 +53,18 @@ return (
             <input type= "text" id="bio" name="bio" placeholder="Tell us about yourself" onChange={(e) => setBio(e.target.value)} value = {getBio} ></input>
 
             <label for="preference">Preference</label>
-            <label for="preference">
+            
                 <input type="radio"
-                       id="perference"
-                       name="preference"
-                       onChange={(e) => setPreference(true)} >Host</input>
-            </label>
-            <label for="preference">
+                       id="host"
+                       name="host"
+                       onChange={(e) => setPreference(true)} ></input>
+                <label for="host">Host</label>
+            
                 <input type="radio"
-                       id="preference"
-                       name="preference"
-                       onChange={(e) => setPreference(false)} >Tourist</input>
-            </label>
+                       id="tourist"
+                       name="tourist"
+                       onChange={(e) => setPreference(false)} ></input>
+            <label for="tourist">Tourist</label>
 
 
             <label for="loc">Location</label>
