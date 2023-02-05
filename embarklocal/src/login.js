@@ -6,6 +6,7 @@ import {useState} from 'react'
 import {query, onSnapshot}  from 'react'
 import { Link } from 'react-router-dom';
 
+
 const LoginPage = () => {
   const[getEmail,setEmail] = useState('')
   const[getPassword,setPassword] = useState('')
@@ -21,9 +22,11 @@ const LoginPage = () => {
       })))
       if(profile[0].data.password == getPassword){
         console.log("logged")
+        window.location.assign(<Link to = "/DashPage"></Link>)
       }
       else{
         setErrmsg("Invalid Email/Password!")
+        window.location.reload(false)
       }
     })
   }
@@ -49,7 +52,8 @@ const LoginPage = () => {
               <label for="password">Password</label>
               <input type= "text" id="password" name="password" placeholder="Enter Password" onChange={(e) => setPassword(e.target.value)} value = {getPassword} ></input>
 
-              <button type = "submit">Save</button>
+              <Link to = "/DashPage"><button type = "submit" >Login</button></Link>
+
           </form>
       </div>
   );
