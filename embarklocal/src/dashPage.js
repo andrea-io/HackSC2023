@@ -1,5 +1,6 @@
 import React from 'react';
 import './profilePage.css';
+import {BrowserRouter, Route, Link } from "react-router-dom";
 
 const DashPage = () => {
     return(
