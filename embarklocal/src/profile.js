@@ -1,14 +1,14 @@
-const Profile = ()=>{
+const Profile = ({imgsrc,firstName,lastName,location,bio})=>{
         return (
             <div id = "user">
                 <div id = "userPic">
-                    <img src = {this.props.imgsrc} alt = {this.props.firstName} ></img>
+                    <img src = {imgsrc} alt = {firstName} ></img>
                 </div>
                 <div id = "userInfo">
-                    <h1>{this.props.firstName} {this.props.lastName}</h1>
+                    <h1>{firstName} {lastName}</h1>
                     <p class = "preferences">Open to day excursions</p>
-                    <p class = "location">{this.props.location}</p>
-                    <p>{this.props.bio}</p>
+                    <p class = "location">{location}</p>
+                    <p>{bio}</p>
                 </div>    
             </div>
         )
