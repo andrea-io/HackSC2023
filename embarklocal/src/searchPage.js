@@ -5,13 +5,13 @@ import reportWebVitals from './reportWebVitals';
 import {useState, useEffect} from 'react'
 import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
 import {db} from './firebase'
-import {BrowserRouter, Route, Link } from "react-router-dom";
+import {BrowserRouter, Route, Link, useLocation } from "react-router-dom";
 import Profile from './profile';
 
 const SearchPage = () => {
-
+    const {state} = useLocation();
     const [profile, setProfile] = useState([])
-
+    console.log(state)
     useEffect(() => {
       const q = query(collection(db, 'profiles'))
       onSnapshot(q, (querySnapshot) => {
