@@ -1,0 +1,53 @@
+#nav-section {
+    margin-bottom: 60px;
+  }
+  
+  #navbar, #navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  #navbar li {
+    background-color: lightskyblue;
+  
+    /* 
+    width of #main = 1000px
+    # of top level menu options = 4
+    1000px / 4 = 250px per menu option 
+    */
+  
+    width: 250px;
+    text-align: center;
+    position: relative;
+  }
+  #navbar {
+    display: flex;
+    justify-content: center;
+    background-color: lightskyblue;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 1;
+  }
+  #navbar li:hover, #active-nav {
+    background-color: lightgray;
+  }
+  #navbar a {
+    text-decoration: none;
+    color: black;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+  }
+  #navbar ul {
+    position: absolute;
+    display: none;
+  }
+  #navbar ul ul {
+    left: 250px;
+    top: 0px;
+  }
+  #navbar li:hover > ul {
+    display: block;
+  }
