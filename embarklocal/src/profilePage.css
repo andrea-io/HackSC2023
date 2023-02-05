@@ -1,0 +1,36 @@
+.parent {
+    margin: auto;
+    width: 500px;
+    background-color: pink;
+    padding: 30px;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+#profilePhoto img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 1px 2px 14px 5px rgba(0,0,0,0.17);
+}
+#userName {
+    background-color: white;
+    border-radius: 10px;
+    align-items: center;
+    vertical-align: middle;
+    padding: 10px;
+    margin-top: 20px;
+}
+#sendMessage {
+    margin-top: 10px;
+}
+#messageBox {
+    margin-top: 10px;
+}
+
+#messageBox input[type="text"] {
+    height: 100px;
+}

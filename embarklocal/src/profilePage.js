@@ -18,6 +18,12 @@ const ProfilePage = () => {
                 <p class = "location">Rio de Janeiro, Brazil</p>
                 <p>I am a baddie from Brazil</p>
             </div>
+            <div id = "messageBox">
+                <input type="text"></input>
+            </div>
+            <div id = "sendMessage">
+                <button>Message Host</button>
+            </div>
         </div>
     ) 
 }
