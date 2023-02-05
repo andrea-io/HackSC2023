@@ -20,8 +20,8 @@ const SearchPage = () => {
     },[])
     
     return(
-      <div id = "parent">
-        <div class="filter">
+    <div id = "parent">
+      <div class="filter">
         <h1>Filter</h1>
             <h2>Length of Stay</h2>
                 <label class="container">Longterm Stay
@@ -32,7 +32,7 @@ const SearchPage = () => {
                     <input type="checkbox"></input>
                     <span class="checkmark"></span>
                 </label>
-    </div>
+      </div>
     <div class="main">
         <div class = "search">
             <h1>Where do you want to go?</h1>
@@ -103,7 +103,7 @@ const SearchPage = () => {
                 </div>
             </button>
         </div>
-    </div>
+      </div>
       </div>
     ) 
   }
