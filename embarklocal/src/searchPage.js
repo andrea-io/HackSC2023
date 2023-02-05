@@ -71,7 +71,7 @@ const SearchPage = () => {
             <div class = "search-bar-container">
                 <form onSubmit={Update} class = "search-bar">
                     <input type = "text" placeholder="Enter your travel location" name = "search"></input>
-                    <button type = "submit"><img src = "https://assets.stickpng.com/images/585e4ad1cb11b227491c3391.png" alt = "search-icon"></img></button>
+                    <button type = "submit"><img src = {EmbarkLogo} alt = "search-icon"></img></button>
                 </form>
             </div>
         </div>
