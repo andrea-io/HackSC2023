@@ -9,10 +9,10 @@ import SearchPage from './searchPage';
 const LandingPage = () => {
   const navigate = useNavigate();
 
-    const handleClick = useCallback(() => {
+    const handleClick = () => {
       navigate('/searchPage');
       console.log("Die");
-    }, [navigate]);
+    };
 
     return (
       <div id = "main">
