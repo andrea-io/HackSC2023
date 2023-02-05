@@ -10,16 +10,21 @@ import { Link } from 'react-router-dom';
 const LoginPage = () => {
   const[getEmail,setEmail] = useState('')
   const[getPassword,setPassword] = useState('')
+  const[getName,setName] = useState('Andrea')
+  const[getPref,setPref] = useState(false)
   const[profile,setProfile] = useState([])
   const[errmsg,setErrmsg] = useState("")
     
   const accessProfile = async (e) => {
-    const q = query(collection(db, 'profiles'), where("email","==",getEmail))
+    const q = await query(collection(db, 'profiles'), where("email","==",getEmail))
     onSnapshot(q, (querySnapshot) => {
       setProfile(querySnapshot.docs.map(doc => ({
         id: doc.id,
         data: doc.data()
       })))
+      console.log(profile)
+      setName(profile[0].data.fName)
+      setPref(profile[0].data.pref)
       if(profile[0].data.password == getPassword){
         console.log("logged")
         window.location.assign(<Link to = "/DashPage"></Link>)
@@ -52,7 +57,7 @@ const LoginPage = () => {
               <label for="password">Password</label>
               <input type= "text" id="password" name="password" placeholder="Enter Password" onChange={(e) => setPassword(e.target.value)} value = {getPassword} ></input>
 
-              <Link to = "/DashPage"><button type = "submit" >Login</button></Link>
+              <Link to ={ {pathname: "/DashPage/Log"}} state={{name:getName,pref:getPref,email:getEmail}}><button type = "submit" >Login</button></Link>
 
           </form>
       </div>
