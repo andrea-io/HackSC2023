@@ -2,10 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import {useState, useEffect} from 'react'
+import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
+import {db} from './firebase'
 
 
 class SearchPage extends React.Component{
   render() {
+    const [tasks, setTasks] = useState([])
+
+    useEffect(() => {
+      const q = query(collection(db, 'tasks'))
+      onSnapshot(q, (querySnapshot) => {
+        setTasks(querySnapshot.docs.map(doc => ({
+          id: doc.id,
+          data: doc.data()
+        })))
+      })
+    },[])
+    
+
     return(
         <>
         <div class="filter">
