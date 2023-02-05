@@ -66,7 +66,6 @@ return (
             <input type= "text" id="bio" name="bio" placeholder="Tell us about yourself" onChange={(e) => setBio(e.target.value)} value = {getBio} ></input>
 
             <label for="preference">Preference</label>
-            
                 <input type="radio"
                        id="host"
                        name="host"
@@ -79,6 +78,18 @@ return (
                        onChange={(e) => setPreference(false)} ></input>
             <label for="tourist">Tourist</label>
 
+            <label for="tripLength">Length of Trip</label>
+                <input type="radio"
+                       id="longterm"
+                       name="longterm"
+                       onChange={(e) => setTripLength(true)} ></input>
+                <label for="longterm">Longterm Stay</label><br></br>
+            
+                <input type="radio"
+                       id="day"
+                       name="day"
+                       onChange={(e) => setTripLength(false)} ></input>
+            <label for="day">Day Excursion</label>
 
             <label for="loc">Location</label>
             <select id="loc" name="loc" onChange={(e) => setLocation(e.target.value)}>
