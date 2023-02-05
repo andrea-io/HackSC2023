@@ -5,7 +5,6 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route, Link } from "react-router-dom";
 import { redirect } from 'react-router-dom';
 import EmbarkLogo from './elLogo.png'
-import SearchImg from './search.png'
 
 const LandingPage = () => {
 
