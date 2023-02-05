@@ -36,3 +36,22 @@
     margin-left: 180px;
     align-content: left;
 }
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    margin: auto;
+    color: black;
+    background-color: lightblue;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px; 
+    border-radius: 25px;
+  }
+  
+  button:hover, a:hover {
+    opacity: 0.7;
+  } 
