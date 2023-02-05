@@ -7,6 +7,7 @@ import {collection, query, where, onSnapshot} from "firebase/firestore"
 import {db} from './firebase'
 import {BrowserRouter, Route, Link, useLocation } from "react-router-dom";
 import Profile from './profile';
+import SearchImg from './search.png'
 
 const SearchPage = () => {
     const {state} = useLocation();
@@ -71,7 +72,7 @@ const SearchPage = () => {
             <div class = "search-bar-container">
                 <form onSubmit={Update} class = "search-bar">
                     <input type = "text" placeholder="Enter your travel location" name = "search"></input>
-                    <button type = "submit"><img src = {EmbarkLogo} alt = "search-icon"></img></button>
+                    <button type = "submit"><img src = {SearchImg} alt = "search-icon"></img></button>
                 </form>
             </div>
         </div>
