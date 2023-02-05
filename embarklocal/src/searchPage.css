@@ -8,6 +8,12 @@
   background-color: #a7a7a7; 
   overflow-x: hidden; 
   padding: 10px;
+  text-align: center;
+}
+
+.filter h2 {
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .container {
@@ -17,6 +23,8 @@
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
+  font-weight: normal;
+  text-align: left;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -164,6 +172,7 @@ button:hover, a:hover {
   background: transparent;
   flex: 1;
   background-color: whitesmoke;
+  color: black;
   padding: 24px 20px;
   border-radius: 8px;
   font-size: 20px;

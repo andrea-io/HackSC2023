@@ -112,7 +112,8 @@ body {
   .search-bar input {
     background: transparent;
     flex: 1;
-    color: blue;
+    background-color: whitesmoke;
+    color: black;
     padding: 24px 20px;
     border-radius: 8px;
     font-size: 20px;
