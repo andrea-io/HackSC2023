@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './searchPage.css';
 import reportWebVitals from './reportWebVitals';
 import {useState, useEffect} from 'react'
-import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
+import {collection, query, where, onSnapshot} from "firebase/firestore"
 import {db} from './firebase'
 import {BrowserRouter, Route, Link, useLocation } from "react-router-dom";
 import Profile from './profile';
@@ -13,7 +13,7 @@ const SearchPage = () => {
     const [profile, setProfile] = useState([])
     console.log(state)
     useEffect(() => {
-      const q = query(collection(db, 'profiles'))
+      const q = query(collection(db, 'profiles'), where("preference","==",!state.pref))
       onSnapshot(q, (querySnapshot) => {
         setProfile(querySnapshot.docs.map(doc => ({
           id: doc.id,
@@ -22,6 +22,23 @@ const SearchPage = () => {
       })
     },[])
 
+    const Update = async (e)=>{
+        e.preventDefault();
+        setProfile([])
+        try{
+            const q = query(collection(db, 'profiles'), where("preference","==",!state.pref))
+            onSnapshot(q, (querySnapshot) => {
+              setProfile(querySnapshot.docs.map(doc => ({
+                id: doc.id,
+                data: doc.data()
+              })))
+            })
+        }
+        catch(err){
+            alert(err)
+        }
+
+    }
     return(
     <div id = "parent">
       <div id = "nav-section">
@@ -52,7 +69,7 @@ const SearchPage = () => {
         <div class = "search">
             <h1>Where do you want to go?</h1>
             <div class = "search-bar-container">
-                <form action = "" class = "search-bar">
+                <form onSubmit={Update} class = "search-bar">
                     <input type = "text" placeholder="Enter your travel location" name = "search"></input>
                     <button type = "submit"><img src = "https://assets.stickpng.com/images/585e4ad1cb11b227491c3391.png" alt = "search-icon"></img></button>
                 </form>
