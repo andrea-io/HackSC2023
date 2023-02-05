@@ -77,7 +77,7 @@ const SearchPage = () => {
         </div>
         {
             profile.map((prof)=>(
-              <Link to = "/ProfilePage">
+              <Link to = {{pathname:"/ProfilePage"}}state = {prof.data}>
                 <Profile 
                     imgsrc = {prof.data.imgsrc}
                     firstName = {prof.data.firstName}
