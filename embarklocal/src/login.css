@@ -44,9 +44,9 @@
     justify-content: center;
     }
 
-    button[type="button"] {
+    button[type="submit"] {
     background-color: lightblue;
-    color: white;
+    color: black;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -54,6 +54,7 @@
     font-weight: bold;
     margin-right: 20px;
     cursor: pointer;
+    margin-top: 20px;
     }
     #nav-section {
         margin-bottom: 60px;
