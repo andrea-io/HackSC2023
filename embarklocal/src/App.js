@@ -7,8 +7,8 @@ function App() {
   <>
     <Router>
         <Routes>
-          <Route exact path = "/" component={LandingPage} />
           <Route exact path = "/SearchPage" component={SearchPage} />
+          <Route exact path = "/" component={LandingPage} />
         </Routes>
       </Router>
   </>

@@ -8,6 +8,7 @@ import { redirect } from 'react-router-dom';
 const LandingPage = () => {
     const handleClick = async() => {
       console.log("Die");
+    //   window.location = "/SearchPage"; 
       return redirect("/SearchPage");
     };
 
