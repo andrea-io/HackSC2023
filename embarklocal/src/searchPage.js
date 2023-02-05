@@ -6,7 +6,6 @@ import {useState, useEffect} from 'react'
 import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
 import {db} from './firebase'
 
-
 const SearchPage = () => {
     const [tasks, setTasks] = useState([])
 
@@ -22,7 +21,7 @@ const SearchPage = () => {
     
 
     return(
-        <>
+      <div id = "parent">
         <div class="filter">
             <h1>Filter</h1>
                 <a href = "#">Location</a>
@@ -42,7 +41,7 @@ const SearchPage = () => {
                 </button>
             </div>
         </div>
-        </>
+      </div>
     )
 
     

@@ -10,8 +10,9 @@ const LandingPage = () => {
 
     const handleClick = useCallback(() => {
       navigate('/search');
+      console.log("Die");
     }, [navigate]);
-    
+
     return (
       <div id = "main">
         <div id = "nav-section">
