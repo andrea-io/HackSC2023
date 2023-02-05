@@ -50,6 +50,9 @@ body {
     padding: 0;
     margin: 0;
   }
+  #navbar img{
+    background-image: url(embarklocal\src\Untitled_Artwork.png);
+  }
   #navbar li {
     background-color: lightskyblue;
   
