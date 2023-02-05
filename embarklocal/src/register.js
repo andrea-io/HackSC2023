@@ -16,6 +16,7 @@ const[getBio,setBio] = useState('')
 const[getPassword,setPassword] = useState('')
 const[getLocation,setLocation] = useState('')
 const[getPreference,setPreference] = useState('')
+const[getTripLength, setTripLength] = useState('')
 
 const addProfile = async (e) => {
     e.preventDefault()
@@ -28,6 +29,7 @@ const addProfile = async (e) => {
         password: getPassword, // text 
         bio: getBio, // text 
         loc: getLocation, // dropdown
+        tripLength: getTripLength,
         applied: [],
         imgsrc: "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" 
       })
