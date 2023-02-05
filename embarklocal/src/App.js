@@ -11,11 +11,8 @@ function App() {
     <Router>
         <Routes>
           <Route exact path = "/SearchPage" element={<SearchPage/>} />
-<<<<<<< HEAD
           <Route exact path = "/RegisterPage" element={<RegisterPage/>} />
           {/* <Route exact path = "/" component={LandingPage} /> */}
-=======
->>>>>>> 63ae0792ccacc904101f6824d3ee6d9df1fa376c
           <Route index element={<LandingPage/>} />
           </Routes>
       </Router>
