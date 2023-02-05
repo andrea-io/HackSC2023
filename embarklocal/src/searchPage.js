@@ -6,9 +6,22 @@ import {useState, useEffect} from 'react'
 import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
 import {db} from './firebase'
 import {BrowserRouter, Route, Link } from "react-router-dom";
+import Profile from './profile';
 
 const SearchPage = () => {
-    
+
+    const [profile, setProfile] = useState([])
+
+    useEffect(() => {
+      const q = query(collection(db, 'profiles'))
+      onSnapshot(q, (querySnapshot) => {
+        setProfile(querySnapshot.docs.map(doc => ({
+          id: doc.id,
+          data: doc.data()
+        })))
+      })
+    },[])
+
     return(
     <div id = "parent">
       <div class="filter">
@@ -33,6 +46,17 @@ const SearchPage = () => {
                 </form>
             </div>
         </div>
+        {
+            profile.map((prof)=>(
+                <Profile 
+                    imgsrc = "https://assets.stickpng.com/images/585e4ad1cb11b227491c3391.png"
+                    firstName = {prof.data.firstName}
+                    lastName = {prof.data.lastName}
+                    bio = {prof.data.bio}
+                    location = {prof.data.loc}
+                />
+            ))
+        }
         <div class = "profile">
             <button>
                 <div id = "user">
@@ -99,6 +123,3 @@ const SearchPage = () => {
 }
 
 export default SearchPage;
-
-
-
