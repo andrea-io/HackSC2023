@@ -7,9 +7,17 @@ import reportWebVitals from './reportWebVitals';
 class SearchPage extends React.Component{
   render() {
     return(
-        <div id = "main">
-        
+        <>
+        <div class="filter">
+            <h1>Filter</h1>
         </div>
+        <div class="search">
+            <input type="text" placeholder="Search.."></input>
+        </div>
+        <div class="main">
+
+        </div>
+        </>
     )
 
     
