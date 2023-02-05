@@ -24,6 +24,18 @@ const SearchPage = () => {
 
     return(
     <div id = "parent">
+      <div id = "nav-section">
+          <ul id="navbar">
+          <li><a id = "active-nav" href="">Home</a></li>
+            <li>
+            <Link to = "/RegisterPage"><a href="">Register</a></Link>
+            <ul>
+            </ul>
+          </li>
+          <li><Link to = "/LoginPage"><a href = "">Log In</a></Link></li>
+          <li><Link to = "/FAQPage"><a href = "">FAQ</a></Link></li>
+          </ul>
+        </div>
       <div class="filter">
         <h1>Filter</h1>
             <h2>Length of Stay</h2>

@@ -3,7 +3,8 @@ import {db} from './firebase'
 import './login.css'
 import {collection, addDoc, where} from 'firebase/firestore'
 import {useState} from 'react'
-import {query, onSnapshot, Link}  from 'react'
+import {query, onSnapshot}  from 'react'
+import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
   const[getEmail,setEmail] = useState('')
@@ -33,11 +34,11 @@ const LoginPage = () => {
           <ul id="navbar">
           <li><Link to = "/"><a href="">Home</a></Link></li>
             <li>
-            <Link to = "/RegisterPage"><a id = "active-nav" href="">Register</a></Link>
+            <Link to = "/RegisterPage"><a href="">Register</a></Link>
             <ul>
             </ul>
           </li>
-          <li><Link to = "/LoginPage"><a href = "">Log In</a></Link></li>
+          <li><Link to = "/LoginPage"><a id = "active-nav" href = "">Log In</a></Link></li>
           <li><Link to = "/FAQPage"><a href = "">FAQ</a></Link></li>
           </ul>
         </div>

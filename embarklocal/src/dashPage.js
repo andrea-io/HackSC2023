@@ -6,6 +6,18 @@ import Profile from './profile';
 const DashPage = () => {
     return(
         <div class = "parent">
+            <div id = "nav-section">
+          <ul id="navbar">
+          <li><Link to = "/"><a href="">Home</a></Link></li>
+            <li>
+            <Link to = "/RegisterPage"><a href="">Register</a></Link>
+            <ul>
+            </ul>
+          </li>
+          <li><Link to = "/LoginPage"><a href = "">Log In</a></Link></li>
+          <li><Link to = "/FAQPage"><a id = "active-nav" href = "">FAQ</a></Link></li>
+          </ul>
+        </div>
             <h1>Welcome Ana!</h1>
             <div id = "search">
                 <h2>Where do you want to go?</h2>
