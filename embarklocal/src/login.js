@@ -2,16 +2,16 @@ import { useRef } from 'react';
 import {db} from './firebase'
 import './login.css'
 import {collection, addDoc, where} from 'firebase/firestore'
-import useState from 'react'
-import {useEffect, query, onSnapshot, addProfile, Link}  from 'react'
+import {useState} from 'react'
+import {query, onSnapshot, Link}  from 'react'
 
 const LoginPage = () => {
   const[getEmail,setEmail] = useState('')
   const[getPassword,setPassword] = useState('')
   const[profile,setProfile] = useState([])
   const[errmsg,setErrmsg] = useState("")
-
-  useEffect(() => {
+    
+  const accessProfile = async (e) => {
     const q = query(collection(db, 'profiles'), where("email","==",getEmail))
     onSnapshot(q, (querySnapshot) => {
       setProfile(querySnapshot.docs.map(doc => ({
@@ -25,10 +25,6 @@ const LoginPage = () => {
         setErrmsg("Invalid Email/Password!")
       }
     })
-  },[])
-    
-  const accessProfile = async (e) => {
-    
   }
 
   return (
@@ -42,11 +38,6 @@ const LoginPage = () => {
 
               <button type = "submit">Save</button>
           </form>
-          <script>
-            if(setErrmsg != "Invalid Email/Password") {
-              document.write(<Link to = "/dashPage"></Link>)
-            }
-          </script>
       </div>
   );
 }
