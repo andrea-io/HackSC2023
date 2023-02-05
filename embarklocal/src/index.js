@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Link } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
-class LandingPage extends React.Component{
-  render() {
-    return(
+const LandingPage = () => {
+  const navigate = useNavigate();
+
+    const handleClick = useCallback(() => {
+      navigate('/search');
+    }, [navigate]);
+    
+    return (
       <div id = "main">
         <div id = "nav-section">
           <ul id="navbar">
@@ -39,7 +45,7 @@ class LandingPage extends React.Component{
           <div class = "search-bar-container">
             <form action = "" class = "search-bar">
               <input type = "text" placeholder="Enter your travel location" name = "search"></input>
-              <Link to="/SearchPage"><button type = "submit"><img src = "https://assets.stickpng.com/images/585e4ad1cb11b227491c3391.png" alt = "search-icon"></img></button></Link>
+              <button onClick={handleClick}><img src = "https://assets.stickpng.com/images/585e4ad1cb11b227491c3391.png" alt = "search-icon"></img></button>
             </form>
           </div>
         </div> 
@@ -95,7 +101,7 @@ class LandingPage extends React.Component{
 
     
   }
-}
+
 
 export default LandingPage;
 
