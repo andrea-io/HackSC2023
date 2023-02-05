@@ -4,6 +4,7 @@ import RegisterPage from './register.js'
 import ProfilePage from './profilePage.js'
 import DashPage from './dashPage.js'
 import LoginPage from './login.js';
+import FAQPage from './faq.js';
 
 import React from "react";
 import {BrowserRouter as Router, Switch, Route, Routes} from 'react-router-dom';
@@ -19,6 +20,7 @@ function App() {
           <Route exact path = "/ProfilePage" element={<ProfilePage/>} />
           <Route exact path = "/DashPage" element={<DashPage/>} />
           <Route exact path = '/LoginPage' element={<LoginPage/>} />
+          <Route exact path = '/FAQPage'element={<FAQPage/>} />
           {/* <Route exact path = "/" component={LandingPage} /> */}
           <Route index element={<LandingPage/>} />
           </Routes>
