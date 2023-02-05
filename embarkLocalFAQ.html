@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        #main {
+        width: 1000px;
+        margin: auto;
+        }
+        #nav-section {
+        margin-bottom: 60px;
+        }
+
+        #navbar, #navbar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        }
+        #navbar li {
+        background-color: lightskyblue;
+
+        /* 
+        width of #main = 1000px
+        # of top level menu options = 4
+        1000px / 4 = 250px per menu option 
+        */
+
+        width: 250px;
+        text-align: center;
+        position: relative;
+        }
+        #navbar {
+        display: flex;
+        justify-content: center;
+        background-color: lightskyblue;
+        position: fixed;
+        top:0;
+        left:0;
+        right:0;
+        z-index: 2;
+        }
+        #navbar li:hover, #active-nav {
+        background-color: lightgray;
+        }
+        #navbar a {
+        text-decoration: none;
+        color: black;
+        height: 50px;
+        line-height: 50px;
+        display: block;
+        }
+        #navbar ul {
+        position: absolute;
+        display: none;
+        }
+        #navbar ul ul {
+        left: 250px;
+        top: 0px;
+        }
+        #navbar li:hover > ul {
+        display: block;
+        }
+
+        .faq-header {
+        font-size: 30px;
+        border-bottom: 1px dotted #ccc;
+        padding: 24px;
+        }
+
+        .faq-content {
+        margin: 0 auto;
+        }
+
+        .faq-question {
+        padding: 20px 0;
+        border-bottom: 1px dotted #ccc;
+        }
+
+        .panel-title {
+        font-size: 24px;
+        width: 100%;
+        position: relative;
+        margin: 0;
+        padding: 10px 10px 0 48px;
+        display: block;
+        cursor: pointer;
+        }
+
+        .panel-content {
+        font-size: 20px;
+        padding: 0px 14px;
+        margin: 0 40px;
+        height: 0;
+        overflow: hidden;
+        z-index: -1;
+        position: relative;
+        opacity: 0;
+        -webkit-transition: .4s ease;
+        -moz-transition: .4s ease;
+        -o-transition: .4s ease;
+        transition: .4s ease;
+        }
+
+        .panel:checked ~ .panel-content{
+        height: auto;
+        opacity: 1;
+        padding: 14px;
+        }
+
+        .plus {
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 4px;
+        z-index: 5;
+        font-size: 42px;
+        line-height: 100%;
+        -webkit-user-select: none;    
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        -webkit-transition: .2s ease;
+        -moz-transition: .2s ease;
+        -o-transition: .2s ease;
+        transition: .2s ease;
+        }
+
+        .panel:checked ~ .plus {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        }
+
+        .panel {
+        display: none;
+        }
+    </style>
+</head>
+<body>
+<div id = "main">
+    <div id = "nav-section">
+        <ul id="navbar">
+        <li><a id = "active-nav" href="">Home</a></li>
+        <li>
+        <a href="">Travelers</a>
+        <ul>
+            <li><a href="">Sub-menu 1</a></li>
+            <li><a href="">Sub-menu 2</a>
+            <ul>
+                <li><a href="">Sub-sub-menu 1</a></li>
+                <li><a href="">Sub-sub-menu 2</a></li>
+                <li><a href="">Sub-sub-menu 3</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href = "">Hosts</a></li>
+        <li><a href = "">FAQ</a></li>
+        </ul>
+    </div>
+    <div class="faq-header">Frequently Asked Questions</div>
+
+    <div class="faq-content">
+        <div class="faq-header">General</div>
+        <div class="faq-question">
+        <input id="q1" type="checkbox" class="panel">
+        <div class="plus">+</div>
+        <label for="q1" class="panel-title">What is ConnectLocal?</label>
+        <div class="panel-content">ConnectLocal is a platform that helps travelers
+            make authentic and meaningful connections with locals by matching them with hosts based 
+            on shared interests.</div>
+        </div>
+        <div class="faq-question">
+        <input id="q2" type="checkbox" class="panel">
+        <div class="plus">+</div>
+        <label for="q2" class="panel-title">How does ConnectLocal work?</label>
+        <div class="panel-content">Travelers can browse the profiles of hosts who share 
+            their interests and select a host to connect with. They can then book an experience 
+            or activity with their host and get ready to explore the city and culture like a local.</div>
+        </div>
+        <div class="faq-question">
+        <input id="q3" type="checkbox" class="panel">
+        <div class="plus">+</div>
+        <label for="q3" class="panel-title">Who can become a host on ConnectLocal?</label>
+        <div class="panel-content">Anyone who loves to share their passions, knowledge, and culture can become a 
+            host on ConnectLocal. Whether you're a foodie, an artist, a sports enthusiast, or just love your city, 
+            you can become a host and share your love with travelers from around the world.</div>
+        </div>
+        <div class="faq-question">
+        <input id="q4" type="checkbox" class="panel">
+        <div class="plus">+</div>
+        <label for="q4" class="panel-title">Who can book experiences with ConnectLocal?</label>
+        <div class="panel-content">Anyone who is traveling and looking for a unique and meaningful way to experience the local culture can book experiences with ConnectLocal. Our platform is designed
+            for travelers who want to connect with locals and make their trips more authentic and memorable.</div>
+        </div>
+
+        <div class="faq-header">Booking</div>
+
+        <div class="faq-question">
+        <input id="q5" type="checkbox" class="panel">
+        <div class="plus">+</div>
+        <label for="q5" class="panel-title">How do I book an experience with a host on ConnectLocal?</label>
+        <div class="panel-content">Simply browse the profiles of hosts who share your interests and select the 
+            one you want to connect with. You can then book an experience or activity with your host directly on the platform.</div>
+        </div>
+
+        <div class="faq-question">
+            <input id="q6" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q6" class="panel-title">Can I book experiences with multiple hosts?</label>
+            <div class="panel-content">Absolutely! We encourage travelers to connect with multiple hosts and 
+                experience different parts of the city and culture. You can book as many experiences as you like with different hosts.</div>
+            </div>
+        <div class="faq-question">
+                <input id="q7" type="checkbox" class="panel">
+                <div class="plus">+</div>
+                <label for="q7" class="panel-title">What happens if I need to cancel my booking?</label>
+                <div class="panel-content">You can cancel your booking at any time before the experience takes place.
+                    Our cancellation policy is designed to be fair to both hosts and travelers. Please refer to our terms
+                    and conditions for more information on our cancellation policy.</div>
+        </div>
+        <div class="faq-question">
+                <input id="q8" type="checkbox" class="panel">
+                <div class="plus">+</div>
+                <label for="q8" class="panel-title">What if I have a problem with my booking?</label>
+                <div class="panel-content">If you have any issues with your booking, please reach out to our customer support
+                    team and we will do our best to resolve the issue as quickly as possible.</div>
+        </div>
+
+        <div class="faq-header">Hosts</div>
+
+        <div class="faq-question">
+        <input id="q9" type="checkbox" class="panel">
+        <div class="plus">+</div>
+        <label for="q9" class="panel-title">How do I become a host on ConnectLocal?</label>
+        <div class="panel-content">Becoming a host on ConnectLocal is easy! Simply sign up and create a
+            profile that showcases your passions, skills, and culture. You can then start offering experiences
+            and connecting with travelers from around the world.</div>
+        </div>
+
+        <div class="faq-question">
+            <input id="q10" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q10" class="panel-title">What kind of experiences can I offer as a host on ConnectLocal?</label>
+            <div class="panel-content">As a host, you can offer a variety of experiences and activities that showcase your 
+                passions and knowledge of your city. Whether it's a food tour, a surf lesson, a cultural workshop, 
+                or anything in between, you can offer an experience that travelers will love.</div>
+            </div>
+        <div class="faq-question">
+                <input id="q11" type="checkbox" class="panel">
+                <div class="plus">+</div>
+                <label for="q11" class="panel-title">How do I get paid for hosting an experience on ConnectLocal?</label>
+                <div class="panel-content">As a host, you will receive payment for your experiences 
+                    through our secure platform. The payment will be processed after the experience is completed.</div>
+        </div>
+        <div class="faq-question">
+                <input id="q12" type="checkbox" class="panel">
+                <div class="plus">+</div>
+                <label for="q12" class="panel-title">What if I need to cancel an experience with a traveler?</label>
+                <div class="panel-content">If you need to cancel an experience with a traveler, please 
+                    reach out to our customer support team as soon as possible. We will do our best to find a resolution 
+                    that is fair to both you and the traveler.</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
