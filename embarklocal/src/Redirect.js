@@ -6,10 +6,10 @@ import {
     Redirect,
   } from "react-router-dom";
 
-import LandingPage from "./index";
-import SearchPage from "./searchPage";
+import LandingPage from "./Index";
+import SearchPage from "./SearchPage";
 
-function App() {
+function Redirect() {
   return (
     <>
       {/* This is the alias of BrowserRouter i.e. Router */}
@@ -23,7 +23,7 @@ function App() {
           {/* This route is for about component 
           with exact path "/about", in component 
           props we passes the imported component*/}
-          <Route path="/searchPage" component={SearchPage} />
+          <Route path="/SearchPage" component={SearchPage} />
              
           {/* If any route mismatches the upper 
           route endpoints then, redirect triggers 
@@ -35,4 +35,4 @@ function App() {
   );
 }
 
-export default App;
+export default Redirect;
