@@ -4,14 +4,15 @@ import './landingPage.css';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route, Link } from "react-router-dom";
 import { redirect } from 'react-router-dom';
+import image from 'embarklocal\src\Untitled_Artwork.png';
 
 const LandingPage = () => {
 
     return (
       <div id = "main">
         <div id = "nav-section">
+          <img src="src/Untitled_Artwork.png"></img>
           <ul id="navbar">
-            <img></img>
           <li><a id = "active-nav" href="">Home</a></li>
             <li>
             <Link to = "/RegisterPage"><a href="">Register</a></Link>
