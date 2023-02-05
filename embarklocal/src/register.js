@@ -33,7 +33,6 @@ const addProfile = async (e) => {
     }
   }
   
-
 return (
     <div class ="app">
         <form onSubmit={addProfile}>

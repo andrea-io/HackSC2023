@@ -13,7 +13,7 @@ const LandingPage = () => {
           <ul id="navbar">
           <li><a id = "active-nav" href="">Home</a></li>
             <li>
-            <Link to = '/RegisterPage'><a href="">Register</a></Link>
+            <Link to = "/RegisterPage"><a href="">Register</a></Link>
             <ul>
               <li><a href="">Sub-menu 1</a></li>
               <li><a href="">Sub-menu 2</a>
@@ -36,7 +36,7 @@ const LandingPage = () => {
             that you won't find anywhere else. Join now as a traveler and find your perfect host match or sign up as a host and share your city's hidden gems with travelers from around the world.</p>
         </div>
         <div id = "search">
-          <h2>Where do you want to go?</h2>
+        <h2>Where do you want to go?</h2>
           <div class = "search-bar-container">
             <form action = "" class = "search-bar">
               <input type = "text" placeholder="Enter your travel location" name = "search" id="idk"></input>
