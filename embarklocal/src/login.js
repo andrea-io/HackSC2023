@@ -23,7 +23,7 @@ const addProfile = async (e) => {
         preference: getPreference, //radio
         password: getPassword, // text 
         bio: getBio, // text 
-        loc: "afsdasd", // dropdown
+        loc: getLocation, // dropdown
         applied: [], 
       })
     } catch (err) {
