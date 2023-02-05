@@ -7,8 +7,7 @@ import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
 import {db} from './firebase'
 
 
-class SearchPage extends React.Component{
-  render() {
+const SearchPage = () => {
     const [tasks, setTasks] = useState([])
 
     useEffect(() => {
@@ -48,7 +47,6 @@ class SearchPage extends React.Component{
 
     
   }
-}
 
 export default SearchPage;
 
