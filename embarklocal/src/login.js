@@ -29,6 +29,18 @@ const LoginPage = () => {
 
   return (
       <div class ="app">
+        <div id = "nav-section">
+          <ul id="navbar">
+          <li><Link to = "/"><a href="">Home</a></Link></li>
+            <li>
+            <Link to = "/RegisterPage"><a id = "active-nav" href="">Register</a></Link>
+            <ul>
+            </ul>
+          </li>
+          <li><Link to = "/LoginPage"><a href = "">Log In</a></Link></li>
+          <li><Link to = "/FAQPage"><a href = "">FAQ</a></Link></li>
+          </ul>
+        </div>
           <form onSubmit={accessProfile}>
               <label for="email">Email</label>
               <input type= "text" id="email" name="email" placeholder="Your email"  onChange={(e) => setEmail(e.target.value)} value = {getEmail} ></input>

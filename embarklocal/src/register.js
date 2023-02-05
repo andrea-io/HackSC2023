@@ -39,7 +39,7 @@ return (
     <div class ="app">
       <div id = "nav-section">
           <ul id="navbar">
-          <li><a href="">Home</a></li>
+          <li><Link to = "/"><a href="">Home</a></Link></li>
             <li>
             <Link to = "/RegisterPage"><a id = "active-nav" href="">Register</a></Link>
             <ul>
