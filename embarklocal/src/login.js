@@ -39,7 +39,11 @@ const LoginPage = () => {
 
               <button type = "submit">Save</button>
           </form>
-          <h1>{errmsg}</h1>
+          <script>
+            if(setErrmsg != "Invalid Email/Password") {
+              document.write(<Link to = "/dashPage"></Link>)
+            }
+          </script>
       </div>
   );
 
