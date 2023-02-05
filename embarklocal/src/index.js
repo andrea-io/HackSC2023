@@ -1,12 +1,14 @@
 import React, { StrictMode, useCallback } from 'react';
-import ReactDOM from 'react-dom';
 import {createRoot} from "react-dom/client"
 import './index.css';
 import App from "./App";
 
-ReactDOM.render (
+const root = createRoot(document.getElementById("root"));
+console.log("created root");
+root.render (
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById("root")
 )
+
+console.log("rendered app");

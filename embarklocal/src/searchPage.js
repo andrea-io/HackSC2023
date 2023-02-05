@@ -7,7 +7,7 @@ import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
 import {db} from './firebase'
 
 const SearchPage = () => {
-    // const [tasks, setTasks] = useState([]);
+    // const [tasks, setTasks] = useState([])
 
     // useEffect(() => {
     //   const q = query(collection(db, 'tasks'))
@@ -17,7 +17,7 @@ const SearchPage = () => {
     //       data: doc.data()
     //     })))
     //   })
-    // },[]);
+    // },[])
     
     return(
     <div id = "parent">
@@ -25,7 +25,7 @@ const SearchPage = () => {
         <h1>Filter</h1>
             <h2>Length of Stay</h2>
                 <label class="container">Longterm Stay
-                    <input type="checkbox" checked="checked"></input>
+                    <input type="checkbox"></input>
                     <span class="checkmark"></span>
                 </label>
                 <label class="container">Day Excursion
@@ -111,13 +111,4 @@ const SearchPage = () => {
 export default SearchPage;
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <SearchPage/>
-  </React.StrictMode>
-);
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
