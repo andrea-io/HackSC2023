@@ -48,6 +48,7 @@ const SearchPage = () => {
         </div>
         {
             profile.map((prof)=>(
+              <Link to = "/ProfilePage">
                 <Profile 
                     imgsrc = {prof.data.imgsrc}
                     firstName = {prof.data.firstName}
@@ -55,6 +56,7 @@ const SearchPage = () => {
                     bio = {prof.data.bio}
                     location = {prof.data.loc}
                 />
+                </Link>
             ))
         }
         <div class = "profile">
