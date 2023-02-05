@@ -2,16 +2,17 @@ import { useRef } from 'react';
 import {db} from './firebase'
 import {collection, addDoc, where} from 'firebase/firestore'
 import useState from 'react'
-import {BrowserRouter, Route, Link } from "react-router-dom";
-
+import {useEffect, query, onSnapshot, addProfile, Link}  from 'react'
 const LoginPage = () => {
+
+
   const[getEmail,setEmail] = useState('')
   const[getPassword,setPassword] = useState('')
   const[profile,setProfile] = useState([])
   const[errmsg,setErrmsg] = useState("")
 
   useEffect(() => {
-    const q = query(collection(db, 'profiles'), where("email","==",getEmail))
+    const q = query(collection(db, 'profiles'), where("esmail","==",getEmail))
     onSnapshot(q, (querySnapshot) => {
       setProfile(querySnapshot.docs.map(doc => ({
         id: doc.id,
