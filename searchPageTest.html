@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .filter {
+    height: 100%;
+    width: 160px; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: #a7a7a7; 
+    overflow-x: hidden; 
+    padding-top: 20px;
+  }
+  
+  .filter a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  .filter a:hover {
+    color: #a6a9f3;
+  }
+
+  .search input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }
+ 
+  .profile {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-height: 400px;
+    max-width: 1000px;
+    margin: auto; 
+    text-align: center; 
+    border-radius: 25px;
+  }
+  .location {
+    color: cadetblue;
+    font-size: 18px;
+  }
+  .preferences {
+    color: cornflowerblue;
+  }
+
+  #userPic{
+    float: left;
+    width: 170px;
+    height: 170px;
+    overflow: hidden;
+  }
+  #userPic img {
+    border-radius: 50%;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  #userInfo{
+    text-align: left;
+    margin-left: 180px;
+    align-content: left;
+  }
+
+  h1{
+    margin-bottom: 0px;
+  }
+  p {
+    margin: 5px;
+  }
+
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    margin: auto;
+    color: black;
+    background-color: lightblue;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px; 
+    border-radius: 25px;
+  }
+
+  button:hover, a:hover {
+    opacity: 0.7;
+  } 
+
+  .main {
+    margin-left: 160px;
+    padding: 75px;
+  }
+
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  
+    </style>
+</head>
+<body>
+    <div class="filter">
+            <h1>Filter</h1>
+                <a href = "#">Location</a>
+                <a href = "#">Interests</a>
+                <a href = "#">Length of Stay</a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search.."></input>
+        </div>
+        <div class="main">
+            <div class = "profile">
+                <button>
+                    <div id = "user">
+                        <div id = "userPic">
+                            <img src = "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80" alt = "Username" ></img>
+                        </div>
+                        <div id = "userInfo">
+                            <h1>Joseph Gonzalez</h1>
+                            <p class = "preferences">Available to host</p>
+                            <p class = "location">Los Angeles, CA</p>
+                            <p>Hi! I have lived in Los Angeles for 15 years. I would love to share my love for surfing and cooking with a tourist. I can speak English and Spanish.</p>
+                        </div>    
+                    </div>
+                </button>
+            </div>
+        </div>
+</html>
