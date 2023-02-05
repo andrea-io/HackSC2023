@@ -7,140 +7,228 @@
     <title>Document</title>
     <style>
     .filter {
-    height: 100%;
-    width: 160px; 
-    position: fixed; 
-    z-index: 1; 
-    top: 0; 
-    left: 0;
-    background-color: #a7a7a7; 
-    overflow-x: hidden; 
-    padding-top: 20px;
-  }
+        height: 100%;
+        width: 180px; 
+        position: fixed; 
+        z-index: 1; 
+        top: 0; 
+        left: 0;
+        height: 100vh;
+        background-color: #a7a7a7; 
+        overflow-x: hidden; 
+        padding-top: 50px;
+    }
   
-  .filter a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-  }
+    .filter a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #000000;
+        display: block;
+    }
+
+    .filter a:hover {
+        background-color: #a6a9f3;
+    }
+
+    .profile {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-height: 400px;
+        max-width: 1000px;
+        margin: auto; 
+        text-align: center; 
+        border-radius: 25px;
+        margin-top: 30px;
+    }
+    .location {
+        color: cadetblue;
+        font-size: 18px;
+    }
+    .preferences {
+        color: cornflowerblue;
+    }
+
+    #userPic{
+        float: left;
+        width: 170px;
+        height: 170px;
+        overflow: hidden;
+    }
+    #userPic img {
+        border-radius: 50%;
+        border-style: solid;
+        border-color: black;
+        border-width: 5px;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    #userInfo{
+        text-align: left;
+        margin-left: 180px;
+        align-content: left;
+    }
+
+    h1{
+        margin-bottom: 0px;
+    }
+    p {
+        margin: 5px;
+    }
+
+    button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        margin: auto;
+        color: black;
+        background-color: lightblue;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px; 
+        border-radius: 25px;
+    }
+
+    button:hover, a:hover {
+        opacity: 0.7;
+    } 
+    
+    .search {
+        background-color: lightblue;
+        border-radius: 25px;
+        padding: 10px;
+    }
+
+    .search h1 {
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .search-bar-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+    }
+    .search-bar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        padding: 10px 20px;
+    }
+    .search-bar input {
+        background: transparent;
+        flex: 1;
+        background-color: whitesmoke;
+        padding: 24px 20px;
+        border-radius: 8px;
+        font-size: 20px;
+    }
+    .search-bar button img {
+        width: 25px;
+    }
+    .search-bar button {
+        border: 0;
+        border-radius: 8px;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+    }
+
+    .main {
+        text-align: center;
+        margin-left: 200px;
+    }
+
   
-  .filter a:hover {
-    color: #a6a9f3;
-  }
-
-  .search input[type=text] {
-    float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
-  }
- 
-  .profile {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-height: 400px;
-    max-width: 1000px;
-    margin: auto; 
-    text-align: center; 
-    border-radius: 25px;
-  }
-  .location {
-    color: cadetblue;
-    font-size: 18px;
-  }
-  .preferences {
-    color: cornflowerblue;
-  }
-
-  #userPic{
-    float: left;
-    width: 170px;
-    height: 170px;
-    overflow: hidden;
-  }
-  #userPic img {
-    border-radius: 50%;
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-  }
-
-  #userInfo{
-    text-align: left;
-    margin-left: 180px;
-    align-content: left;
-  }
-
-  h1{
-    margin-bottom: 0px;
-  }
-  p {
-    margin: 5px;
-  }
-
-  button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    margin: auto;
-    color: black;
-    background-color: lightblue;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px; 
-    border-radius: 25px;
-  }
-
-  button:hover, a:hover {
-    opacity: 0.7;
-  } 
-
-  .main {
-    margin-left: 160px;
-    padding: 75px;
-  }
-
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-  
+    @media screen and (max-height: 450px) {
+        .filter {padding-top: 15px;}
+        .filter a {font-size: 18px;}
+    }
+    
     </style>
 </head>
 <body>
     <div class="filter">
-            <h1>Filter</h1>
-                <a href = "#">Location</a>
-                <a href = "#">Interests</a>
-                <a href = "#">Length of Stay</a>
-        </div>
-        <div class="search">
-            <input type="text" placeholder="Search.."></input>
-        </div>
-        <div class="main">
-            <div class = "profile">
-                <button>
-                    <div id = "user">
-                        <div id = "userPic">
-                            <img src = "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80" alt = "Username" ></img>
-                        </div>
-                        <div id = "userInfo">
-                            <h1>Joseph Gonzalez</h1>
-                            <p class = "preferences">Available to host</p>
-                            <p class = "location">Los Angeles, CA</p>
-                            <p>Hi! I have lived in Los Angeles for 15 years. I would love to share my love for surfing and cooking with a tourist. I can speak English and Spanish.</p>
-                        </div>    
-                    </div>
-                </button>
+        <h1>Filter</h1>
+            <h2>Length of Stay</h2>
+            <a href = "#">Longterm Stay</a>
+            <a href = "#">Day Excursion</a>
+    </div>
+    <div class="main">
+        <div class = "search">
+            <h1>Where do you want to go?</h1>
+            <div class = "search-bar-container">
+                <form action = "" class = "search-bar">
+                    <input type = "text" placeholder="Enter your travel location" name = "search"></input>
+                    <Link to="/SearchPage"><button type = "submit"><img src = "https://assets.stickpng.com/images/585e4ad1cb11b227491c3391.png" alt = "search-icon"></img></button></Link>
+                </form>
             </div>
         </div>
+        <div class = "profile">
+            <button>
+                <div id = "user">
+                    <div id = "userPic">
+                        <img src = "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80" alt = "Username" ></img>
+                    </div>
+                    <div id = "userInfo">
+                        <h1>Jake Wilson</h1>
+                        <p class = "preferences">Open to host</p>
+                        <p class = "location">Melbourne, Australia</p>
+                        <p>Hey, I'm Jake, a street artist from Melbourne. I offer street art tours and workshops, showcasing the city's street art culture. When I'm not creating art, I explore Melbourne's music scene.</p>
+                    </div>    
+                </div>
+            </button>
+        </div>
+        <div class = "profile">
+            <button>
+                <div id = "user">
+                    <div id = "userPic">
+                        <img src = "https://images.unsplash.com/photo-1509839862600-309617c3201e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt = "Username" ></img>
+                    </div>
+                    <div id = "userInfo">
+                        <h1>Ana Silva</h1>
+                        <p class = "preferences">Open to host</p>
+                        <p class = "location">Rio de Janeiro, Brazil</p>
+                        <p>Hi, I'm Ana, a surf instructor from Rio de Janeiro. I offer surf lessons for all levels, and love sharing my passion with travelers. When I'm not surfing, I explore the local street art and music scene.</p>
+                    </div>    
+                </div>
+            </button>
+        </div>
+        <div class = "profile">
+            <button>
+                <div id = "user">
+                    <div id = "userPic">
+                        <img src = "https://images.unsplash.com/photo-1590031905406-f18a426d772d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1844&q=80" alt = "Username" ></img>
+                    </div>
+                    <div id = "userInfo">
+                        <h1>Miguel Garcia</h1>
+                        <p class = "preferences">Open to day excursions</p>
+                        <p class = "location">Madrid, Spain</p>
+                        <p>Hello, I'm Miguel, a foodie from Madrid. I offer cooking classes in my home kitchen where you'll learn traditional Spanish cuisine and sample local wines. I enjoy exploring Madrid's food markets.</p>
+                    </div>    
+                </div>
+            </button>
+        </div>
+        <div class = "profile">
+            <button>
+                <div id = "user">
+                    <div id = "userPic">
+                        <img src = "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80" alt = "Username" ></img>
+                    </div>
+                    <div id = "userInfo">
+                        <h1>Rachel Smith</h1>
+                        <p class = "preferences">Open to host and day excursions</p>
+                        <p class = "location">New York City, New York, USA</p>
+                        <p>Hi, I'm Rachel, a contemporary dancer from New York. I offer dance workshops for all levels, showcasing the city's diverse music scene. When I'm not dancing, I check out local art exhibitions and theaters.</p>
+                    </div>    
+                </div>
+            </button>
+        </div>
+    </div>
 </html>
