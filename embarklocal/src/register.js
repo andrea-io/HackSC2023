@@ -37,6 +37,18 @@ const addProfile = async (e) => {
   
 return (
     <div class ="app">
+      <div id = "nav-section">
+          <ul id="navbar">
+          <li><a href="">Home</a></li>
+            <li>
+            <Link to = "/RegisterPage"><a id = "active-nav" href="">Register</a></Link>
+            <ul>
+            </ul>
+          </li>
+          <li><Link to = "/LoginPage"><a href = "">Log In</a></Link></li>
+          <li><Link to = "/FAQPage"><a href = "">FAQ</a></Link></li>
+          </ul>
+        </div>
         <form onSubmit={addProfile}>
             <label for="firstName">First Name</label>
             <input type= "text" id="firstName" name="firstName" placeholder="Your name..." onChange={(e) => setfName(e.target.value)} value = {fName} ></input>
@@ -79,7 +91,7 @@ return (
               <option value="Other">Other</option>
             </select>
 
-            <Link to = "/dashPage"><button type = "submit">Save</button></Link>
+            <Link to = "/dashPage"><button type = "submit">Register</button></Link>
         </form>
     </div>
 );
