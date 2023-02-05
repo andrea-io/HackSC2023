@@ -4,14 +4,13 @@ import './landingPage.css';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route, Link } from "react-router-dom";
 import { redirect } from 'react-router-dom';
-import image from 'embarklocal\src\Untitled_Artwork.png';
+import EmbarkLogo from './elLogo.png'
 
 const LandingPage = () => {
 
     return (
       <div id = "main">
         <div id = "nav-section">
-          <img src="src/Untitled_Artwork.png"></img>
           <ul id="navbar">
           <li><a id = "active-nav" href="">Home</a></li>
             <li>
@@ -24,6 +23,7 @@ const LandingPage = () => {
           </ul>
         </div>
         <div id = "header">
+            <img src={EmbarkLogo}></img>
             <h1>EmbarkLocal</h1>
             <p>Welcome to EmbarkLocal, your one-stop solution for authentic and meaningful travel experiences.
             With our platform, you can connect with local hosts who share your interests and offer unique, insider experiences

@@ -21,6 +21,14 @@ body {
     display: flex;
   }
   
+  #header > img {
+    height: 100px;
+    width: 100px;
+    
+    align-items: center;
+    position:relative;
+  }
+
   .img-container {
     display: block;
     align-items: center;
