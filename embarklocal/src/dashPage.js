@@ -1,5 +1,5 @@
 import React from 'react';
-import './profilePage.css';
+import './dashPage.css';
 import {BrowserRouter, Route, Link } from "react-router-dom";
 
 const DashPage = () => {
@@ -15,6 +15,22 @@ const DashPage = () => {
                     </form>
                 </div>
             </div> 
+            <div>
+                <h1>Offers</h1>
+                {
+                    profile.map((prof)=>(
+                    <Link to = "/ProfilePage">
+                        <Profile 
+                            imgsrc = {prof.data.imgsrc}
+                            firstName = {prof.data.firstName}
+                            lastName = {prof.data.lastName}
+                            bio = {prof.data.bio}
+                            location = {prof.data.loc}
+                        />
+                        </Link>
+                    ))
+                }
+            </div>
         </div>
     ) 
 }
