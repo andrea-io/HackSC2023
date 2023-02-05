@@ -21,12 +21,20 @@ body {
     display: flex;
   }
   
+  #header {
+    margin-top: 100px;
+  }
+
   #header > img {
-    height: 100px;
-    width: 100px;
-    
+    height: 150px;
+    width: 150px;
+    margin-right: 25px;
     align-items: center;
     position:relative;
+    float: left;
+  }
+  #header-text{
+    float: left;
   }
 
   .img-container {
