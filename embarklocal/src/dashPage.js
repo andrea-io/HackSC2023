@@ -1,6 +1,7 @@
 import React from 'react';
 import './dashPage.css';
 import {BrowserRouter, Route, Link } from "react-router-dom";
+import Profile from './profile';
 
 const DashPage = () => {
     return(
@@ -17,7 +18,7 @@ const DashPage = () => {
             </div> 
             <div>
                 <h1>Offers</h1>
-                {
+                {/* {
                     profile.map((prof)=>(
                     <Link to = "/ProfilePage">
                         <Profile 
@@ -29,7 +30,7 @@ const DashPage = () => {
                         />
                         </Link>
                     ))
-                }
+                } */}
             </div>
         </div>
     ) 
