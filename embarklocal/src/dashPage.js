@@ -22,13 +22,13 @@ const DashPage = (props) => {
           <li><Link to = "/FAQPage"><a id = "active-nav" href = "">FAQ</a></Link></li>
           </ul>
         </div>
-            <h1>Welcome {state}!</h1>
+            <h1>Welcome {state.name}!</h1>
             <div id = "search">
                 <h2>Where do you want to go?</h2>
                 <div class = "search-bar-container">
                     <form action = "" class = "search-bar">
                     <input type = "text" placeholder="Enter your travel location" name = "search" id="idk"></input>
-                    <Link to='/SearchPage'><button><img src = "https://assets.stickpng.com/images/585e4ad1cb11b227491c3391.png" alt = "search-icon"></img></button></Link>
+                    <Link to='/SearchPage' state={state}><button><img src = "https://assets.stickpng.com/images/585e4ad1cb11b227491c3391.png" alt = "search-icon"></img></button></Link>
                     </form>
                 </div>
             </div> 

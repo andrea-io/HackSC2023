@@ -91,7 +91,7 @@ return (
               <option value="Other">Other</option>
             </select>
 
-            <Link to ={ {pathname: "/DashPage/Reg"}} state={fName}><button type = "submit">Register</button></Link>
+            <Link to ={ {pathname: "/DashPage/Reg"}} state={{name:fName,pref:getPreference,email:getEmail}}><button type = "submit">Register</button></Link>
         </form>
     </div>
 );
