@@ -33,13 +33,16 @@ class LandingPage extends React.Component{
             <p>Welcome to ConnectLocal, your one-stop solution for authentic and meaningful travel experiences.
             With our platform, you can connect with local hosts who share your interests and offer unique, insider experiences
             that you won't find anywhere else. Join now as a traveler and find your perfect host match or sign up as a host and share your city's hidden gems with travelers from around the world.</p>
-        </div> 
-        <div id = "buttons">
-          <div class = "action-button">
-            <button name = "submit" id = "hosts-button" type="submit" value="Hosts">Hosts</button>
-            <button name = "submit" id = "travelers-button" type="submit" value="Travelers">Travelers</button>
-          </div>
         </div>
+        <div id = "search">
+          <h2>Where do you want to go?</h2>
+          <div class = "search-bar-container">
+            <form action = "" class = "search-bar">
+              <input type = "text" placeholder="Enter your travel location" name = "search"></input>
+              <button type = "submit"><img src = "https://assets.stickpng.com/images/585e4ad1cb11b227491c3391.png" alt = "search-icon"></img></button>
+            </form>
+          </div>
+        </div> 
         <div id = "featured-destinations">
             <h2>Our Featured Destinations</h2>
             <div id="thumbnails">

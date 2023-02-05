@@ -20,34 +20,7 @@ code {
 #thumbnails {
   display: flex;
 }
-#featured-destinations {
-  margin-top: 50px;
-}
-#testimonies {
-  margin-top: 50px;
-}
-#buttons {
-  width: auto;
-  display: inline;
-  text-align: center;
-}
-.action-button {
-  width: auto;
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-#hosts-button {
-  height: 50px;
-  width: 200px;
-  text-align: center;
-}
-#travelers-button {
-  height: 50px;
-  width: 200px;
-  text-align: center;
-}
+
 .img-container {
   display: block;
   align-items: center;
@@ -120,4 +93,37 @@ code {
 }
 #navbar li:hover > ul {
   display: block;
+}
+.search-bar-container {
+  width: 100%;
+  /* background-image: linear-gradient(green,blue); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.search-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+.search-bar input {
+  background: transparent;
+  flex: 1;
+  color: blue;
+  padding: 24px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+.search-bar button img {
+  width: 25px;
+}
+.search-bar button {
+  border: 0;
+  border-radius: 8px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
 }
