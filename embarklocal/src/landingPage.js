@@ -17,7 +17,7 @@ const LandingPage = () => {
             <ul>
             </ul>
           </li>
-          <li><a href = "">Hosts</a></li>
+          <li><Link to = "/LoginPage"><a href = "">Log In</a></Link></li>
           <li><a href = "">FAQ</a></li>
           </ul>
         </div>

@@ -2,10 +2,9 @@ import { useRef } from 'react';
 import {db} from './firebase'
 import {collection, addDoc, where} from 'firebase/firestore'
 import useState from 'react'
+import {BrowserRouter, Route, Link } from "react-router-dom";
 
 const LoginPage = () => {
-
-
   const[getEmail,setEmail] = useState('')
   const[getPassword,setPassword] = useState('')
   const[profile,setProfile] = useState([])
