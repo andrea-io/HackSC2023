@@ -33,9 +33,6 @@ body {
     position:relative;
     float: left;
   }
-  #header-text{
-    float: left;
-  }
 
   .img-container {
     display: block;
