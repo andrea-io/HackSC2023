@@ -6,11 +6,6 @@ import {BrowserRouter, Route, Link } from "react-router-dom";
 import { redirect } from 'react-router-dom';
 
 const LandingPage = () => {
-    const handleClick = async() => {
-    //   console.log("Die");
-    //   window.location = "/SearchPage"; 
-    //   return redirect("/SearchPage");
-    };
 
     return (
       <div id = "main">
@@ -45,7 +40,6 @@ const LandingPage = () => {
           <div class = "search-bar-container">
             <form action = "" class = "search-bar">
               <input type = "text" placeholder="Enter your travel location" name = "search" id="idk"></input>
-              {/* <button onClick={handleClick()}><img src = "https://assets.stickpng.com/images/585e4ad1cb11b227491c3391.png" alt = "search-icon"></img></button> */}
               <Link to='/SearchPage'><img src = "https://assets.stickpng.com/images/585e4ad1cb11b227491c3391.png" alt = "search-icon"></img></Link>
             </form>
           </div>
@@ -106,13 +100,3 @@ const LandingPage = () => {
 
 export default LandingPage;
 
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-//   <BrowserRouter>
-//     <LandingPage/>
-//   </BrowserRouter>
-// );
-// // If you want to start measuring performance in your app, pass a function
-// // to log results (for example: reportWebVitals(console.log))
-// // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-// reportWebVitals();
