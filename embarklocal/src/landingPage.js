@@ -2,15 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './landingPage.css';
 import reportWebVitals from './reportWebVitals';
-// import {BrowserRouter, Route, Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
+import {BrowserRouter, Route, Link } from "react-router-dom";
+import { redirect } from 'react-router-dom';
 
 const LandingPage = () => {
-  const navigate = useNavigate();
-
-    const handleClick = () => {
-      navigate('/SearchPage');
+    const handleClick = async() => {
       console.log("Die");
+      return redirect("/SearchPage");
     };
 
     return (

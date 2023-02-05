@@ -7,17 +7,17 @@ import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
 import {db} from './firebase'
 
 const SearchPage = () => {
-    const [tasks, setTasks] = useState([])
+    // const [tasks, setTasks] = useState([]);
 
-    useEffect(() => {
-      const q = query(collection(db, 'tasks'))
-      onSnapshot(q, (querySnapshot) => {
-        setTasks(querySnapshot.docs.map(doc => ({
-          id: doc.id,
-          data: doc.data()
-        })))
-      })
-    },[])
+    // useEffect(() => {
+    //   const q = query(collection(db, 'tasks'))
+    //   onSnapshot(q, (querySnapshot) => {
+    //     setTasks(querySnapshot.docs.map(doc => ({
+    //       id: doc.id,
+    //       data: doc.data()
+    //     })))
+    //   })
+    // },[]);
     
     return(
     <div id = "parent">
