@@ -106,7 +106,7 @@ return (
             </select>
 
             {/* <Link to ={ {pathname: "/DashPage/Reg"}} state={{name:fName,pref:getPreference,email:getEmail}}> */}
-              <button onClick={()=>navigate("/DashPage")}>Register</button>
+              <button onClick={()=>navigate("/DashPage/Reg")}>Register</button>
               {/* </Link> */}
         </form>
     </div>
