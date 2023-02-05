@@ -27,13 +27,10 @@ const LoginPage = () => {
     })
   },[])
     
-  const accessProfile = async (e) => {
-    
-  }
 
   return (
       <div class ="app">
-          <form onSubmit={accessProfile}>
+          <form onSubmit={addProfile}>
               <label for="email">Email</label>
               <input type= "text" id="email" name="email" placeholder="Your email"  onChange={(e) => setEmail(e.target.value)} value = {getEmail} ></input>
 
