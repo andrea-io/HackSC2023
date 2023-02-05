@@ -53,7 +53,7 @@ const SearchPage = () => {
                     firstName = {prof.data.firstName}
                     lastName = {prof.data.lastName}
                     bio = {prof.data.bio}
-                    location = {prof.data.location}
+                    location = {prof.data.loc}
                 />
             ))
         }
