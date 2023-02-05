@@ -3,7 +3,8 @@ import {db} from './firebase'
 import './login.css'
 import {collection, addDoc, where} from 'firebase/firestore'
 import {useState} from 'react'
-import {query, onSnapshot, Link}  from 'react'
+import {query, onSnapshot}  from 'react'
+import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
   const[getEmail,setEmail] = useState('')
