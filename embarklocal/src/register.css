@@ -61,15 +61,16 @@
     justify-content: center;
     }
 
-    button[type="button"] {
+    button {
     background-color: lightblue;
-    color: white;
+    color: black;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 525%px;
     font-size: 16px;
     font-weight: bold;
     margin-right: 20px;
+    margin-top: 10px;
     cursor: pointer;
     }
     #nav-section {
