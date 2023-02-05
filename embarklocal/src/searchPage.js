@@ -85,6 +85,7 @@ const SearchPage = () => {
                     lastName = {prof.data.lastName}
                     bio = {prof.data.bio}
                     location = {prof.data.loc}
+                    tripLength = {prof.data.pref}
                 />
                 </Link>
             ))

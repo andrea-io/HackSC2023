@@ -1,6 +1,10 @@
 import './profile.css';
 
 const Profile = ({imgsrc,firstName,lastName,tripLength,location,bio})=>{
+    let word = "many";
+    if(tripLength){
+        word = "a few"
+    }
         return (
             <div class = "profile">
                 <button>
@@ -10,7 +14,7 @@ const Profile = ({imgsrc,firstName,lastName,tripLength,location,bio})=>{
                         </div>
                         <div id = "userInfo">
                             <h1>{firstName} {lastName}</h1>
-                            <p class = "tripLength">Willing to embark for {tripLength} days</p>
+                            <p class = "tripLength">Willing to embark for {word} days</p>
                             <p class = "location">{location}</p>
                             <p>{bio}</p>
                         </div>    
