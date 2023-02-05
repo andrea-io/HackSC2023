@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #main {
+        width: 1000px;
+        margin: auto;
+        }
+
+        #thumbnails {
+        display: flex;
+        }
+
+        .img-container {
+        display: block;
+        align-items: center;
+        flex-direction: column;
+        background-color: green;
+        margin: 20px;
+        width: 360px;
+        height: 420px;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 1px 2px 14px 5px rgba(0,0,0,0.17);
+        position: relative;
+        }
+        .img-container > img {
+        width: auto;
+        height: 100%;
+        align-items: center;
+        position:absolute; 
+        object-fit: cover;
+        }
+        #nav-section {
+        margin-bottom: 60px;
+        }
+
+        #navbar, #navbar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        }
+        #navbar li {
+        background-color: lightskyblue;
+
+        /* 
+        width of #main = 1000px
+        # of top level menu options = 4
+        1000px / 4 = 250px per menu option 
+        */
+
+        width: 250px;
+        text-align: center;
+        position: relative;
+        }
+        #navbar {
+        display: flex;
+        justify-content: center;
+        background-color: lightskyblue;
+        position: fixed;
+        top:0;
+        left:0;
+        right:0;
+        z-index: 1;
+        }
+        #navbar li:hover, #active-nav {
+        background-color: lightgray;
+        }
+        #navbar a {
+        text-decoration: none;
+        color: black;
+        height: 50px;
+        line-height: 50px;
+        display: block;
+        }
+        #navbar ul {
+        position: absolute;
+        display: none;
+        }
+        #navbar ul ul {
+        left: 250px;
+        top: 0px;
+        }
+        #navbar li:hover > ul {
+        display: block;
+        }
+        .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: lightcoral;
+        border-radius: 5px;
+        padding-bottom: 30px;
+        margin-top: 200px;
+        }
+
+        input[type="text"], input[type="password"] {
+        padding: 5px;
+        font-size: 16px;
+        width: 200px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        }
+
+        input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: lightblue;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id = "main">
+        <div id = "nav-section">
+          <ul id="navbar">
+          <li><a id = "active-nav" href="">Home</a></li>
+            <li>
+            <a href="">Travelers</a>
+            <ul>
+              <li><a href="">Sub-menu 1</a></li>
+              <li><a href="">Sub-menu 2</a>
+                <ul>
+                  <li><a href="">Sub-sub-menu 1</a></li>
+                  <li><a href="">Sub-sub-menu 2</a></li>
+                  <li><a href="">Sub-sub-menu 3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href = "">Hosts</a></li>
+          <li><a href = "">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="container">
+            <h1>Login/Sign Up Page</h1>
+            <form>
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email">
+              <br><br>
+              <label for="firstname">First Name</label>
+              <input type="text" id="firstname" name="firstname">
+              <br><br>
+              <label for="lastname">Last Name</label>
+              <input type="text" id="lastname" name="lastname">
+              <br><br>
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password">
+              <br><br>
+              <input type="submit" value="Login">
+              <input type="submit" value="Sign Up">
+            </form>
+          </div>
+    </div>
+</body>
+</html>
