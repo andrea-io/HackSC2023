@@ -8,12 +8,38 @@ class LandingPage extends React.Component{
   render() {
     return(
       <div id = "main">
+        <div id = "nav-section">
+          <ul id="navbar">
+          <li><a id = "active-nav" href="">Home</a></li>
+            <li>
+            <a href="">Travelers</a>
+            <ul>
+              <li><a href="">Sub-menu 1</a></li>
+              <li><a href="">Sub-menu 2</a>
+                <ul>
+                  <li><a href="">Sub-sub-menu 1</a></li>
+                  <li><a href="">Sub-sub-menu 2</a></li>
+                  <li><a href="">Sub-sub-menu 3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href = "">Hosts</a></li>
+          <li><a href = "">FAQ</a></li>
+          </ul>
+        </div>
         <div id = "header">
             <h1>EmbarkLocal</h1>
             <p>Welcome to ConnectLocal, your one-stop solution for authentic and meaningful travel experiences.
             With our platform, you can connect with local hosts who share your interests and offer unique, insider experiences
             that you won't find anywhere else. Join now as a traveler and find your perfect host match or sign up as a host and share your city's hidden gems with travelers from around the world.</p>
         </div> 
+        <div id = "buttons">
+          <div class = "action-button">
+            <button name = "submit" id = "hosts-button" type="submit" value="Hosts">Hosts</button>
+            <button name = "submit" id = "travelers-button" type="submit" value="Travelers">Travelers</button>
+          </div>
+        </div>
         <div id = "featured-destinations">
             <h2>Our Featured Destinations</h2>
             <div id="thumbnails">
