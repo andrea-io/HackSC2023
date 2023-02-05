@@ -19,7 +19,6 @@ const SearchPage = () => {
       })
     },[])
     
-
     return(
       <div id = "parent">
         <div class="filter">
@@ -40,7 +39,7 @@ const SearchPage = () => {
             <div class = "search-bar-container">
                 <form action = "" class = "search-bar">
                     <input type = "text" placeholder="Enter your travel location" name = "search"></input>
-                    <Link to="/SearchPage"><button type = "submit"><img src = "https://assets.stickpng.com/images/585e4ad1cb11b227491c3391.png" alt = "search-icon"></img></button></Link>
+                    <button type = "submit"><img src = "https://assets.stickpng.com/images/585e4ad1cb11b227491c3391.png" alt = "search-icon"></img></button>
                 </form>
             </div>
         </div>
