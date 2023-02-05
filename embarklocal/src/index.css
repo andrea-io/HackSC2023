@@ -26,6 +26,16 @@ code {
 #testimonies {
   margin-top: 50px;
 }
+#buttons {
+  width: 500px;
+  margin: auto;
+  display: inline;
+}
+.action-button {
+  width: 500px;
+  margin: auto;
+  display: inline;
+}
 .img-container {
   display: block;
   align-items: center;

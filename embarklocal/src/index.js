@@ -34,6 +34,12 @@ class LandingPage extends React.Component{
             With our platform, you can connect with local hosts who share your interests and offer unique, insider experiences
             that you won't find anywhere else. Join now as a traveler and find your perfect host match or sign up as a host and share your city's hidden gems with travelers from around the world.</p>
         </div> 
+        <div id = "buttons">
+          <div class = "action-button">
+            <button name = "submit" type="submit" value="Hosts">Hosts</button>
+            <button name = "submit" type="submit" value="Travelers">Travelers</button>
+          </div>
+        </div>
         <div id = "featured-destinations">
             <h2>Our Featured Destinations</h2>
             <div id="thumbnails">
