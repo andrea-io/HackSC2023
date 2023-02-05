@@ -10,13 +10,22 @@ class SearchPage extends React.Component{
         <>
         <div class="filter">
             <h1>Filter</h1>
-            <input type = "checkbox"></input>
+                <a href = "#">Location</a>
+                <a href = "#">Interests</a>
+                <a href = "#">Length of Stay</a>
         </div>
         <div class="search">
             <input type="text" placeholder="Search.."></input>
         </div>
         <div class="main">
-
+            <div class = "profile">
+                <button>
+                    <img src = "" alt = "Username" style = "width:100%"></img>
+                    <h1>First Last</h1>
+                    <p class = "location">Los Angeles, CA</p>
+                    <p>Hi! I have lived in Los Angeles for 15 years. I would love to share my love for surfing and cooking. </p>
+                </button>
+            </div>
         </div>
         </>
     )
