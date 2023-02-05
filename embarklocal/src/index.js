@@ -36,8 +36,8 @@ class LandingPage extends React.Component{
         </div> 
         <div id = "buttons">
           <div class = "action-button">
-            <button name = "submit" type="submit" value="Hosts">Hosts</button>
-            <button name = "submit" type="submit" value="Travelers">Travelers</button>
+            <button name = "submit" id = "hosts-button" type="submit" value="Hosts">Hosts</button>
+            <button name = "submit" id = "travelers-button" type="submit" value="Travelers">Travelers</button>
           </div>
         </div>
         <div id = "featured-destinations">

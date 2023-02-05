@@ -27,14 +27,21 @@ code {
   margin-top: 50px;
 }
 #buttons {
-  width: 500px;
-  margin: auto;
+  width: auto;
   display: inline;
 }
 .action-button {
-  width: 500px;
-  margin: auto;
-  display: inline;
+  width: auto;
+  display: inline-block;
+  align-items: center;
+}
+#hosts-button {
+  height: 50px;
+  width: 200px;
+}
+#travelers-button {
+  height: 50px;
+  width: 200px;
 }
 .img-container {
   display: block;
