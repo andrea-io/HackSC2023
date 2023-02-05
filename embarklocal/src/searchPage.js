@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import {useState, useEffect} from 'react'
 import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
 import {db} from './firebase'
+import {BrowserRouter, Route, Link } from "react-router-dom";
 
 const SearchPage = () => {
     
