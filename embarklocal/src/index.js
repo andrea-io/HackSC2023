@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import Link from './Link';
 
 class LandingPage extends React.Component{
   render() {
@@ -38,7 +39,7 @@ class LandingPage extends React.Component{
           <div class = "search-bar-container">
             <form action = "" class = "search-bar">
               <input type = "text" placeholder="Enter your travel location" name = "search"></input>
-              <button type = "submit"><img src = "https://assets.stickpng.com/images/585e4ad1cb11b227491c3391.png" alt = "search-icon"></img></button>
+              <Link to="/searchPage"><button type = "submit"><img src = "https://assets.stickpng.com/images/585e4ad1cb11b227491c3391.png" alt = "search-icon"></img></button></Link>
             </form>
           </div>
         </div> 
