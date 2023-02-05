@@ -73,19 +73,19 @@ const LandingPage = () => {
                 my knowledge of the best surf spots and beach culture with like-minded travelers and it 
                 was such an amazing experience. I loved being able to share my love for the ocean and help 
                 travelers have a truly authentic experience. I highly recommend EmbarkLocal to any host 
-                who wants to share their passions and make a difference in someone else's trip." - John</p>
+                who wants to share their passions and make a difference in someone else's trip." - <strong>John</strong></p>
         <p>"I've always loved cooking and was so excited to find a EmbarkLocal host who could teach me how to make pasta 
             from scratch. The experience was truly unforgettable - not only did I learn how to make delicious pasta, but I 
             also got to share a meal and conversation with my host and other travelers. It was such a unique and intimate way 
             to get to know the local culture and traditions. I highly recommend EmbarkLocal to any traveler who wants to have 
             an authentic and meaningful travel experience. The connections I made with my host and the other travelers will stay 
-            with me forever." - Sarah </p>
+            with me forever." - <strong>Sarah</strong> </p>
         <p>
             "I was hesitant about trying a new way of traveling, but I'm so glad I gave EmbarkLocal a chance. My host
             was an amazing guide and showed me parts of the city I never would have discovered on my own. We bonded
             over our shared love of art and history and I felt like I was experiencing the city with a local
             friend. The experience was truly unforgettable and made my trip so much more meaningful. I can't
-            recommend EmbarkLocal enough to anyone who wants to have a unique and authentic travel experience." - Melissa
+            recommend EmbarkLocal enough to anyone who wants to have a unique and authentic travel experience." - <strong>Melissa</strong>
         </p>
     </div>
     )
