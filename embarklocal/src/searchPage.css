@@ -1,79 +1,191 @@
 .filter {
-    height: 100%;
-    width: 160px; 
-    position: fixed; 
-    z-index: 1; 
-    top: 0; 
-    left: 0;
-    background-color: #a7a7a7; 
-    overflow-x: hidden; 
-    padding-top: 20px;
-  }
-  
-  .filter a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-  }
-  
-  .filter a:hover {
-    color: #a6a9f3;
-  }
+  height: 100%;
+  width: 160px; 
+  position: fixed; 
+  z-index: 1; 
+  left: 10px;
+  height: auto;
+  background-color: #a7a7a7; 
+  overflow-x: hidden; 
+  padding: 10px;
+}
 
-  .search input[type=text] {
-    float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
-  }
- 
-  .profile {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-  }
-  
-  .location {
-    color: grey;
-    font-size: 18px;
-  }
-  
-  button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-  }
-  
-  a {
-    text-decoration: none;
-    font-size: 22px;
-    color: black;
-  }
-  
-  button:hover, a:hover {
-    opacity: 0.7;
-  }
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
 
-  .main {
-    margin-left: 160px;
-    padding: 0px 10px;
-  }
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
 
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-  
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.profile {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-height: 400px;
+  max-width: 1000px;
+  margin: auto; 
+  text-align: center; 
+  border-radius: 25px;
+  margin-top: 30px;
+}
+.location {
+  color: cadetblue;
+  font-size: 18px;
+}
+.preferences {
+  color: cornflowerblue;
+}
+
+#userPic{
+  float: left;
+  width: 170px;
+  height: 170px;
+  overflow: hidden;
+}
+#userPic img {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+#userInfo{
+  text-align: left;
+  margin-left: 180px;
+  align-content: left;
+}
+
+h1{
+  margin-bottom: 0px;
+}
+p {
+  margin: 5px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  margin: auto;
+  color: black;
+  background-color: lightblue;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px; 
+  border-radius: 25px;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+} 
+
+.search {
+  background-color: lightblue;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.search h1 {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.search-bar-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.search-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+.search-bar input {
+  background: transparent;
+  flex: 1;
+  background-color: whitesmoke;
+  padding: 24px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+.search-bar button img {
+  width: 25px;
+}
+.search-bar button {
+  border: 0;
+  border-radius: 8px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.main {
+  text-align: center;
+  margin-left: 200px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .filter {padding-top: 15px;}
+  .filter a {font-size: 18px;}
+}
