@@ -24,10 +24,12 @@ const LandingPage = () => {
         </div>
         <div id = "header">
             <img src={EmbarkLogo}></img>
-            <h1>EmbarkLocal</h1>
-            <p>Welcome to EmbarkLocal, your one-stop solution for authentic and meaningful travel experiences.
-            With our platform, you can connect with local hosts who share your interests and offer unique, insider experiences
-            that you won't find anywhere else. Join now as a traveler and find your perfect host match or sign up as a host and share your city's hidden gems with travelers from around the world.</p>
+            <div id = "header-text">
+                <h1>EmbarkLocal</h1>
+                <p>Welcome to EmbarkLocal, your one-stop solution for authentic and meaningful travel experiences.
+                With our platform, you can connect with local hosts who share your interests and offer unique, insider experiences
+                that you won't find anywhere else. Join now as a traveler and find your perfect host match or sign up as a host and share your city's hidden gems with travelers from around the world.</p>
+            </div>
         </div>
         {/* <div id = "search">
         <h2>Where do you want to go?</h2>
